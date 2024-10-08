@@ -1,0 +1,69 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Ocultar el scroll */
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Asegura que el video esté detrás del contenido */
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    position: relative; /* Coloca el contenido por encima del video */
+    z-index: 1; /* Asegura que el contenido esté por encima del video */
+    color: white; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    padding: 20px;
+}
+
+form {
+    background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: inline-block; /* Ajusta el ancho del formulario */
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #fff;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #28a745; /* Color verde para el botón */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px; /* Tamaño de fuente del botón */
+}
+
+button:hover {
+    background-color: #218838; /* Color más oscuro al pasar el ratón */
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}

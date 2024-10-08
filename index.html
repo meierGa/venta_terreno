@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Precio de Terreno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <video autoplay muted loop id="background-video">
+        <source src="../imagenes/terreno.mp4" type="video/mp4">
+        Tu navegador no soporta videos.
+    </video>
+
+    <div class="content">
+        <h1>Predicción del Precio del Terreno</h1>
+        <form method="POST">
+            <label for="area">Área:</label>
+            <input type="text" name="area" required>
+            <br>
+            <label for="ubicacion">Ubicación:</label>
+            <select name="ubicacion" required>
+                <option value="">Seleccione una opción</option>
+                <option value="satipo">Satipo</option>
+                <option value="rio negro">Rio Negro</option>
+                <option value="mazamari">Mazamari</option>
+                <option value="pichanaki">Pichanaki</option>
+            </select>
+            <br>
+            <label for="tipo">Tipo_Terreno:</label>
+            <select name="tipo" required>
+                <option value="">Seleccione una opción</option>
+                <option value="residencial">Residencial</option>
+                <option value="comercial">Comercial</option>
+                <option value="industrial">Industrial</option>
+            </select>
+            <br>
+            <button type="submit">Calcular Precio</button>
+        </form>
+
+        {% if precio is not none %}
+            <h2>El precio del terreno es: ${{ precio }}</h2>
+        {% endif %}
+    </div>
+
+</body>
+</html>
